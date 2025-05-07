@@ -12,7 +12,7 @@ const RegisterForm = () => {
     email: string;
     phone: string;
     password: string;
-    password2: string;
+    passwordConfirm: string;
   }
 
   const [form, setForm] = useState<IForm>({
@@ -21,7 +21,7 @@ const RegisterForm = () => {
     email: "",
     phone: "",
     password: "",
-    password2: ""
+    passwordConfirm: ""
   });
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -31,12 +31,12 @@ const RegisterForm = () => {
 
 
   return (
-    <div className="h-fit text-white py-8 px-12 rounded-lg border w-[28vw] min-w-[360px]">
+    <div className="h-fit text-white py-8 px-12 rounded-lg border w-[28vw] min-w-[360px] shadow-[0px_0px_10px_5px_rgb(154,1,255)]">
       <form className="flex flex-col gap-4" onSubmit={handleSubmit}>
         <h1 className="text-4xl font-bold text-center">Register</h1>
         <Input 
           type="text"
-          placeholder="Surname..."
+          placeholder="Surname..."  
           value={form.surname}
           setValue={(t) => setForm(prev => ({...prev, surname: t}))}
           header="Surname"
@@ -82,8 +82,8 @@ const RegisterForm = () => {
         <Input 
           type="password"
           placeholder="********"
-          value={form.password2}
-          setValue={(t) => setForm(prev => ({...prev, password2: t}))}
+          value={form.passwordConfirm}
+          setValue={(t) => setForm(prev => ({...prev, passwordConfirm: t}))}
           header="Repeat Password"
         />
 
@@ -91,7 +91,7 @@ const RegisterForm = () => {
           type="submit"
           className="mt-2"
         >
-          <span className="font-semibold text-white">Register</span>
+          <span className="font-light text-black text-[16px]">Register</span>
         </Button>
       </form>
     </div>

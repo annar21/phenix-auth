@@ -12,7 +12,7 @@ interface InputProps {
 const Input = ({type, placeholder, value, setValue, header, className}: InputProps) => {
   return (
     <div className="w-full">
-      <div>
+      <div className="text-[16px] mb-1">
         {header}
       </div>
       <input 
@@ -21,7 +21,7 @@ const Input = ({type, placeholder, value, setValue, header, className}: InputPro
         value={value}
         onChange={(e) => setValue(e.target.value)}
         className={clsx(
-          'rounded-md p-2 text-black w-full placeholder:text-sm border transition-all duration-50 border-purple-900 focus:border-[2px]',
+          'rounded-xl p-2 text-white w-full placeholder:text-sm bg-[#202020]',
           className,
         )}
       />

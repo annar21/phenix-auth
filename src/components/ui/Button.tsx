@@ -13,7 +13,7 @@ const Button = ({children, onClick, className}: ButtonProps) => {
     <button
       onClick={onClick}
       className={clsx(
-        'bg-purple-700 rounded-md py-2 hover:bg-purple-800 transition-all duration-200',
+        'bg-white rounded-xl py-2 hover:bg-[#ececec] transition-all duration-200',
         className
       )}
     >

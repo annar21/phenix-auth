@@ -2,11 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     outline: none;
-    box-sizing: border-box;
+    box-sizing: border-box !important;
+    font-family: 'Roboto', sans-serif;
 }
 
 .react-tel-input .country .country-name {
@@ -19,12 +22,55 @@
     padding-top: 0 !important;
     padding-bottom: 0 !important;
     width: 100% !important;
+    background: #202020 !important;
+    color: #fff;
+    border: none !important;
+    border-radius: 15px !important;
+}
+
+.selected-flag, .open {
+    background: #202020 !important;
+    border: none !important;
+    outline: none !important;
+    border-top-left-radius: 10px !important;
+    border-bottom-left-radius: 10px !important;
+}
+
+.flag-dropdown {
+    border: none !important;
+    outline: none !important;
+    border-radius: 15px !important;
+}
+
+.country-list {
+    background: #181818 !important;
+    color: #fff !important;
+}
+
+.country-list::-webkit-scrollbar {
+    background: #000;
+    border-radius: 20px !important;
+}
+
+.country-list::-webkit-scrollbar-thumb {
+    background: #333;
+    border-radius: 10px;
+    height: 60px;
+}
+
+.highlight {
+    background-color: #282828 !important;
+}
+
+li.country:hover {
+    background-color: #282828 !important;
 }
 
 /* #0e0e10 → #2a003f */
 
 .ant-modal-content {
-    background: linear-gradient(45deg,#9f7aea,#2a003f) !important;
+    /* background: linear-gradient(45deg,#9f7aea,#2a003f) !important; */
+    background-color: #181818 !important;
 }
 
 .ant-modal-close {
