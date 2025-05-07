@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.react-tel-input .country .country-name {
+    display: none !important; /* hides 'Armenia' but keeps '+374' */
+}
+
+.react-tel-input .form-control {
+    height: 41.6px !important; 
+    line-height: 41.6px !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    width: 100% !important;
+}
+
+/* #0e0e10 → #2a003f */
+
+.ant-modal-content {
+    background: linear-gradient(45deg,#9f7aea,#2a003f) !important;
+}
+
+.ant-modal-close {
+    color: white !important; 
+}
+
+.ant-modal-body {
+    display: flex !important;
+    justify-content: center !important;
+    width: 100% !important;
+}
